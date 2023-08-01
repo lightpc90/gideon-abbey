@@ -35,7 +35,7 @@
     gap: 1rem;
 }
 
-.experience__details-icon{
+.experience__details_icon{
     margin-top: 6px;
     color: var(--color-primary);
 }

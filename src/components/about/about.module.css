@@ -5,8 +5,8 @@
  }
  
  .about__me{
-     width: 100%;
-     border-radius: 2rem;
+     width: 50%;
+     border-radius: 50%;
      background: linear-gradient(
          45deg,
          var(--color-primary),
@@ -16,15 +16,15 @@
      place-items: center;
  }
  
- .about__me-image{
+ .about__me_image{
      border-radius: 2rem;
-     overflow: hidden;
+     object-fit: 'fill';
      aspect-ratio: 1/1;
      transform: rotate(10deg);
      transition: var(--transition);
  
  }
- .about__me-image:hover{
+ .about__me_image:hover{
      transform: rotate(0);
  }
  

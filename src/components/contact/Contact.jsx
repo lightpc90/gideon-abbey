@@ -1,52 +1,75 @@
 import React from "react";
-import './contact.css';
+import style from './contact.module.css';
 import {MdEmail} from 'react-icons/md';
 import {BsWhatsapp} from 'react-icons/bs'
-import { useRef } from 'react';
+import { useState, useEffect } from 'react';
 import emailjs from 'emailjs-com'
+import { Container, Button, Input, Textarea, Link, Spacer, Col, Row, Text } from "@nextui-org/react";
 
 const Contact = () => {
-    const form = useRef();
 
-    const sendEmail = (e) => {
-    e.preventDefault();
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [message, setMessage] = useState('')
+    const [formFilled, setFormFilled] = useState(false)
 
-    emailjs.sendForm('service_qkk6zta', 'template_z40nlow', form.current, '_QtqTYQ1KUObNtBwI')
-    
-    e.target.reset()
+    const isFormFilled = ()=>{
+        if(name && email && message){
+            setFormFilled(true)
+        }
+        else{setFormFilled(false)}
+    }
+
+    useEffect(()=>{
+        isFormFilled()
+    }, [name, email, message])
+
+    const handleSendMessage = ()=>{
+        const form = {Fullname: {name}, Email: {email}, Message: {message}}
+        emailjs.sendForm('service_qkk6zta', 'template_z40nlow', form, '_QtqTYQ1KUObNtBwI')
+        setName('')
+        setEmail('')
+        setMessage('')
     }
 
     return (
         <section id="contact">
             <h5>Get In Touch</h5>
             <h2>Contact Me</h2>
-
-            <div className="container contact__container">
-                <div className="contact__options">
-                    <article className="contact__option">
-                       <MdEmail className="contact__option-icon" />
-                       <h4>Email</h4> 
-                       <h5>{/*gideonabbey.f@gmail.com*/}</h5>
-                       <a href="mailto:gideonabbey.f@gmail.com">Send a Message</a>
-                    </article>
-
-                    <article className="contact__option">
-                       <BsWhatsapp className="contact__option-icon"/>
+            <Container display="flex" justify="center" direction="column" gap={2}>
+                <Col align='center'>
+                    <MdEmail className={style.contact__option_icon} />
+                    <h4>Email</h4> 
+                    <h5>{/*gideonabbey.f@gmail.com*/}</h5>
+                    <Link href="mailto:gideonabbey.f@gmail.com">Send a Message</Link>
+                </Col>
+                <Spacer y={2}/>
+                <Col align='center'>
+                <BsWhatsapp className={style.contact__option_icon}/>
                        <h4>Whatsapp</h4> 
                        <h5>{/*(+234-813-085-3142)*/}</h5>
-                       <a href="https://api.whatsapp.com/send?phone=2348130853142" target='_blank'>Send a Message</a>
-                    </article>
-                </div>
-                {/* END OF CONTACT OPTIONS*/}
-                <div>
-                    <form ref={form} onClick={sendEmail}>
-                        <input type="text" name="name" placeholder="Your full name" required />
-                        <input type="email" name="email" placeholder="Your Email" required/>
-                        <textarea name="message" rows="7" placeholder="Your message" required></textarea>
-                            <button type="submit" className="btn btn-primary">Send Message</button>
-                    </form>
-                </div>
-            </div>
+                       <Link href="https://api.whatsapp.com/send?phone=2348130853142" target='_blank'>Send a Message</Link>
+                </Col>
+
+                {/** contact form */}
+                <Spacer y={4}/>
+                <Text b align='center'>Send me a Message</Text>
+                <Spacer />
+                <Row justify='center' >
+                    <Input aria-labelledby="full name" value={name} onChange={(e)=>setName(e.target.value)} bordered width="500px" color="primary" placeholder="Your Full Name" />
+                </Row>
+                <Spacer/>
+                <Row justify='center' >
+                    <Input aria-labelledby="email" value={email} onChange={(e)=>setEmail(e.target.value)} bordered width="500px" color="primary" placeholder="Your Email" />
+                </Row>
+                <Spacer/>
+                <Row justify='center' >
+                    <Textarea aria-labelledby="message" value={message} onChange={(e)=>setMessage(e.target.value)} width="500px" bordered color="primary" placeholder="Your Message" />
+                </Row>
+                <Spacer/>
+                <Row justify="center"><Button disabled={!formFilled} onPress={handleSendMessage} bordered color='primary' >Send Message</Button></Row>
+            </Container>
+            <Container></Container>
         </section>
     )
 }

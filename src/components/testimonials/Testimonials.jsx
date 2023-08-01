@@ -1,40 +1,38 @@
 import React from "react";
-import './testimonials.css';
-import AVTR1 from '../../assets/avatar1.png'
-import AVTR2 from '../../assets/avatar2.png'
-import AVTR3 from '../../assets/avatar3.png'
-import AVTR4 from '../../assets/avatar4.jpg'
+import style from './testimonials.module.css';
 
 // import Swiper core and required modules
-import { Pagination } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import Swiper from 'swiper';
+import { Navigation, Pagination} from 'swiper/modules'
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation'
+
 
 
 const data = [
     {
         id: 1,
-        avatar: AVTR1,
+        avatar: 'images/avatar1.png',
         name: 'Tunde Fagbemi',
         review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora eaque dolores animi aut veritatis odio cupiditate esse doloremque in, molestiae recusandae libero natus ipsam, suscipit, delectus dicta atque sunt. Nulla.'
     },
     {
         id: 2,
-        avatar: AVTR2,
+        avatar: 'images/avatar2.png',
         name: 'Peter Fagbemi',
         review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora eaque dolores animi aut veritatis odio cupiditate esse doloremque in, molestiae recusandae libero natus ipsam, suscipit, delectus dicta atque sunt. Nulla.'
     },
     {
         id: 3,
-        avatar: AVTR3,
+        avatar: 'images/avatar3.png',
         name: 'Gideon Fola',
         review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora eaque dolores animi aut veritatis odio cupiditate esse doloremque in, molestiae recusandae libero natus ipsam, suscipit, delectus dicta atque sunt. Nulla.'
     },
     {  id: 4,
-        avatar: AVTR4,
+        avatar: 'images/avatar4.jpg',
         name: 'Kunle Abbey',
         review: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora eaque dolores animi aut veritatis odio cupiditate esse doloremque in, molestiae recusandae libero natus ipsam, suscipit, delectus dicta atque sunt. Nulla.'
     }
@@ -46,7 +44,7 @@ const Testimonials = () => {
             <h5>Review from Clients</h5>
             <h2>Testimonials</h2>
 
-            <Swiper className="container testimonials__container" 
+            <div className={style.testimonials__container} 
             // install Swiper modules
             modules={[Pagination]}
             spaceBetween={40}
@@ -56,19 +54,19 @@ const Testimonials = () => {
               {
                 data.map(({id, avatar, name, review}) => {
                     return (
-                        <SwiperSlide key={id} className="testimonial">
-                        <div className="client__avatar">
+                        <div key={id} className={style.testimonial}>
+                        <div className={style.client__avatar}>
                             <img src={avatar} alt={avatar} />
                         </div>
-                        <h5 className="client__name">{name}</h5>
-                            <small className="client__review">
+                        <h5 className={style.client__name}>{name}</h5>
+                            <small className={style.client__review}>
                                 {review}
                             </small>
-                        </SwiperSlide> 
+                        </div> 
                     )
                 })
               }
-            </Swiper>
+            </div>
         </section>
     )
 }

@@ -1,4 +1,4 @@
-footer {
+.footer {
     background: linear-gradient(45deg, rgba(7, 75, 170), rgba(9, 232, 232, 0.90));
     padding: 3rem 0;
     text-align: center;
@@ -6,7 +6,7 @@ footer {
     margin-top: 7rem;
 }
 
-footer a {
+.footer a {
     color: var(--color-bg);
 }
 

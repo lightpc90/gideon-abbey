@@ -1,34 +1,40 @@
 import React from "react";
-import './footer.css';
+import './footer.module.css';
 import {BsLinkedin} from 'react-icons/bs'
 import {FaGithubSquare} from 'react-icons/fa'
 import {GrInstagram} from 'react-icons/gr'
 import {FaTwitter} from 'react-icons/fa'
+import { Link, Container, Text, Row, Col, Spacer } from "@nextui-org/react";
 
 
 const Footer = () => {
     return (
         <footer id="footer">
-            <a href="#" className="footer__logo">Gideon Abbey</a>
+            <Spacer y={6}/>
+            <Container align='center'>
+            <Link href="#" className="footer__logo">Gideon Abbey</Link>
             <ul className="permalinks">
-                <li><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><Link href="#">Home</Link></li>
+                <li><Link href="#about">About</Link></li>
+                <li><Link href="#experience">Experience</Link></li>
+                <li><Link href="#portfolio">Portfolio</Link></li>
+                <li><Link href="#contact">Contact</Link></li>
             </ul>
-
-            <div className="footer__socials">
-                <a href="https://github.com"><FaGithubSquare /></a>
-                <a href="https://linkedin.com"><BsLinkedin /></a>
-                <a href="https://instagram.com"><GrInstagram /></a>
-                <a href="https://twitter.com"><FaTwitter /></a>
-            </div>
-
-            <div className="footer__copyright">
+            </Container>
+            <Spacer y={6}/>
+            <Container display="flex" justify="center" >
+                <Link href="https://github.com/lightpc90/"><FaGithubSquare size={40}/></Link>
+                <Spacer/>
+                <Link href="https://linkedin.com"><BsLinkedin size={40}/></Link>
+                <Spacer/>
+                <Link href="https://instagram.com"><GrInstagram size={40}/></Link>
+                <Spacer/>
+                <Link href="https://twitter.com"><FaTwitter size={40} /></Link>
+            </Container>
+            <Container><Spacer y={6}/></Container>
+            <Container align='center' >
                 <small>&copy; Gideon Abbey portfolio. All rights reserved</small>
-            </div>
+            </Container>
         </footer>
     )
 }

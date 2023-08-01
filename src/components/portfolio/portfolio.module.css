@@ -17,7 +17,7 @@
     background: transparent;
 }
 
-.portfolio__item-image {
+.portfolio__item_image {
     border-radius: 1.5rem;
     overflow: hidden;
 }
@@ -26,7 +26,7 @@
   margin: 1.2rem 0 2rem;  
 }
 
-.portfolio__item-cta {
+.portfolio__item_cta {
   display: flex;  
   gap: 1rem;
   margin-bottom: 1rem;

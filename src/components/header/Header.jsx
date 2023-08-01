@@ -14,9 +14,9 @@ const Header = () => {
             <Container css={{p:"50px"}}></Container>
             <div className={style.header__container}>
                 <Container css={{p:'$15'}} align='center'>
-                    <Avatar size='xl' src='/images/me.jpg'/>
+                    <Avatar size='xl' src='/images/me.jpg' alt='Gideon-Abbey-Avatar'/>
                 </Container>
-                <h5>Hello I'm</h5>
+                <h5>Hello I&apos;m</h5>
                 <h1>Gideon Abbey </h1>
                 <h5 className="text_light">Fullstack developer | Home Automation Engineer</h5>
                 <CTA />

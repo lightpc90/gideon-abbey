@@ -20,7 +20,7 @@ const PortfolioCard = () => {
             <Grid.Container direction='row' justify='center' gap={2} key={index}>
                 <Grid md={4} sm={8}>
                     <Card>
-                      <Image src={project.image} />
+                      <Image src={project.image} alt={project.name} />
                       <Card.Footer>
                         <Col>
                             <Row>

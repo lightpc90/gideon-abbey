@@ -52,13 +52,9 @@ const About = () => {
                 </Text>
                 <Spacer/>
                 <Link href="#contact">
-                    <Button size='sm' auto color='secondary' bordered ghost>Let's Talk</Button>
+                    <Button size='sm' auto color='secondary' bordered ghost>Let&apos;s Talk</Button>
                 </Link>
-                
-            </Container>
-                    
-                   
-               
+            </Container>    
         </section>
     )
 }

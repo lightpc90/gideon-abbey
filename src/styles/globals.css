@@ -19,8 +19,11 @@
 /* Set Root Variables */
 :root {
   --foreground-color: #000; /* Adjust as needed */
-  --background-start-color: #d6dbdc; /* Adjust as needed */
-  --background-end-color: #fff; /* Adjust as needed */
+  --background-start-color: #03a8c9; /* Adjust as needed */
+  --background-color-1: #767e04; /* Adjust as needed */
+  --background-color-2: #4a3c72; /* Adjust as needed */
+  --background-color-3: #332a88; 
+  --background-end-color: #03a8c9; /* Adjust as needed */
 }
 
 /* Dark Mode */
@@ -39,7 +42,10 @@ html {
 
 body {
   color: var(--foreground-color);
-  background: linear-gradient(to bottom, transparent, var(--background-end-color)) var(--background-start-color);
+  background: linear-gradient(to bottom, transparent, var(--background-end-color) 20%,  var(--background-color-3) 35%,
+  var(--background-color-2) 50%,
+  var(--background-color-1) 80%,
+  var(--background-start-color));
   font-family: 'Poppins', sans-serif;
   line-height: 1.7;
 }

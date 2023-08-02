@@ -13,7 +13,7 @@ const About = () => {
             <Text align='center'>Get to Know</Text>
             <Text align='center' weight='bold' size={25}>About Me</Text>
             <Container display="flex" justify="center">
-                <Avatar size='xl' src='/images/me.jpg' />
+                <Avatar css={{zIndex: '0'}} size='xl' src='/images/me.jpg' />
                 <Grid.Container justify='center' gap={2}>
                     <Grid>
                         <Card css={{p:'$10'}}>

@@ -14,7 +14,7 @@ const Header = () => {
             <Container css={{p:"50px"}}></Container>
             <div className={style.header__container}>
                 <Container css={{p:'$15'}} align='center'>
-                    <Avatar bordered color='gradient' src="/images/my pictures/dp2.png" className="w-40 h-40 text-large" />
+                    <Avatar css={{zIndex: '0'}} bordered color='gradient' src="/images/my pictures/dp2.png" className="w-40 h-40 text-large" />
                 </Container>
                 <h5>Hello, I&apos;m</h5>
                 <Text align='center' weight='bold' size={40}>Gideon Abbey </Text>

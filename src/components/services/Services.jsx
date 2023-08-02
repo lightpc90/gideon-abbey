@@ -34,14 +34,14 @@ const Services = () => {
             <Spacer/>
             <Container display="flex" justify="center" align='center'>
                 {services.map((service, index)=>(
-                    <>
+                    <div key={index}>
                         <Spacer/>
                         <Text size={30}>{service.image()}</Text>
-                        <Row key={index} justify="center" align="center">
+                        <Row justify="center" align="center">
                             <BsCheck className={style.service__list_icon}/>
                             <Text weight='bold' size={20}>{service.name}</Text>
                         </Row>
-                    </>
+                    </div>
                 ))}
             </Container>
             <Spacer/>

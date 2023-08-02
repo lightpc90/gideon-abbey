@@ -50,7 +50,7 @@ const About = () => {
                 <Text size={20} justify='center'>
                  ...a visionary software developer and home automation engineer. 
                 With an unwavering passion for blockchain and Web3 solutions, I craft seamless, cutting-edge solutions that redefine the future. 
-                Join me on this journey of boundless innovation and let's shape a better world together. 
+                Join me on this journey of boundless innovation and let&apos;s shape a better world together. 
                 Explore my portfolio and discover the power of technology and human ingenuity in action. 
                 Welcome to the future. 
                 <span role="img" aria-label="Handshake">{"\u{1F91D}"}</span>

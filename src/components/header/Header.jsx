@@ -17,7 +17,7 @@ const Header = () => {
                     <Avatar bordered color='gradient' src="/images/my pictures/dp2.png" className="w-40 h-40 text-large" />
                 </Container>
                 <h5>Hello, I&apos;m</h5>
-                <Text align='center' weight='bold' size={25}>Gideon Abbey </Text>
+                <Text align='center' weight='bold' size={40}>Gideon Abbey </Text>
                 <h5 className="text_light">Blockchain/Web3 Developer | Fullstack developer | Home Automation Engineer</h5>
                 <Text weight='bold'>+234(0)813 085 3142</Text>
                 <CTA />

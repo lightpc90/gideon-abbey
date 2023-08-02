@@ -4,22 +4,23 @@ import {BsAward} from 'react-icons/bs'
 import {FaUsers} from 'react-icons/fa'
 import {AiFillProject} from 'react-icons/ai'
 import Image from "next/image";
-import { Container, Spacer, Card, Avatar, Text, Link, Button, Grid } from "@nextui-org/react";
+import { Container, Spacer, Card, Row, Avatar, Text, Link, Button, Grid } from "@nextui-org/react";
 
 const About = () => {
     return (
-        <section id="about">
-            <h5>Get to Know</h5>
-            <h2>About Me</h2>
+        <div id="about">
+            <Spacer y={6}/>
+            <Text align='center'>Get to Know</Text>
+            <Text align='center' weight='bold' size={25}>About Me</Text>
             <Container display="flex" justify="center">
-                <Avatar size='xl' src='/images/me.jpg' />
+                <Avatar css={{zIndex: '0'}} size='xl' src='/images/me.jpg' />
                 <Grid.Container justify='center' gap={2}>
                     <Grid>
                         <Card css={{p:'$10'}}>
                             <Container align='center'>
                                 <BsAward className={style.about__icon}/>
                                 <h5>Experience</h5>
-                                <small>3+ years working</small>
+                                <small>5+ years working</small>
                             </Container>  
                         </Card>
                     </Grid>
@@ -43,19 +44,25 @@ const About = () => {
                     </Grid>
                 </Grid.Container>
             </Container>
-            <Container display="flex" direction="column" justify='center' css={{ "@md": {px:'300px'}  }}>
-                <Text>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-                    Quos rem distinctio similique eum facere magnam maiores. 
-                    Fugit unde aperiam incidunt odio mollitia nulla dicta cumque. 
-                    Debitis saepe itaque quia vero?
+            <Spacer/>
+            <Container display="flex" direction="column" justify='center' css={{ "@md": {px:'500px'}  }}>
+                <Text weight='bold' align='center'>Meet Gideon Abbey</Text>
+                <Text size={20} justify='center'>
+                 ...a visionary software developer and home automation engineer. 
+                With an unwavering passion for blockchain and Web3 solutions, I craft seamless, cutting-edge solutions that redefine the future. 
+                Join me on this journey of boundless innovation and let&apos;s shape a better world together. 
+                Explore my portfolio and discover the power of technology and human ingenuity in action. 
+                Welcome to the future. 
+                <span role="img" aria-label="Handshake">{"\u{1F91D}"}</span>
                 </Text>
                 <Spacer/>
-                <Link href="#contact">
-                    <Button size='sm' auto color='secondary' bordered ghost>Let&apos;s Talk</Button>
+                <Row justify="center">
+                <Link  href="#contact">
+                    <Button  auto color='primary' bordered ghost>Let&apos;s Talk</Button>
                 </Link>
+                </Row>      
             </Container>    
-        </section>
+        </div>
     )
 }
 

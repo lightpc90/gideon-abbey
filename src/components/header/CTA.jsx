@@ -1,13 +1,20 @@
 import React from "react";
 import style from './header.module.css'
+import {Button, Link, Spacer, Container} from '@nextui-org/react'
 
 const CTA = () => {
     return (
-        <div className={style.cta}>
-            <a href='#' download className="btn">Download CV</a>
-            <div className={style.box}>
-                <a href="#contact" className="btn btn-primary">Let&apos;s Talk</a>
-            </div>
+        <div >
+            <Spacer/>
+            <Container justify="center" align='center' display="flex">
+                <Link href='#'>
+                    <Button bordered color='secondary' auto>Download CV</Button>
+                </Link>
+                <Spacer/>
+                <Link href="#contact">
+                    <Button bordered auto flat color='primary'>Let&apos;s Talk</Button>
+                </Link>
+            </Container>  
         </div>
     )
 }

@@ -41,7 +41,7 @@
     margin-bottom: 0.8rem;
 }
 
-.service__list-icon {
+.service__list_icon {
     color: var(--color-primary);
     margin-top: 2px;
 }

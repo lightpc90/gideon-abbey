@@ -9,14 +9,12 @@ const inter = Inter({ subsets: ['latin'] })
 
 const Layout = ({children}) => {
   return (
-    <div>
+    <>
         <Header/>
         <Nav/>
-        <Container css={{p: "$18"}}>
-      {children}
-    </Container>  
+        {children} 
         <Footer/>
-    </div>
+    </>
   )
 }
 

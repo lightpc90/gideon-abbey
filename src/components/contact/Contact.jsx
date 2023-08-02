@@ -4,7 +4,7 @@ import {MdEmail} from 'react-icons/md';
 import {BsWhatsapp} from 'react-icons/bs'
 import { useState, useEffect } from 'react';
 import emailjs from 'emailjs-com'
-import { Container, Button, Input, Textarea, Link, Spacer, Col, Row, Text } from "@nextui-org/react";
+import { Container, Button, Input, Textarea, Link, Spacer, Col, Row, Text, Divider } from "@nextui-org/react";
 
 const Contact = () => {
 
@@ -34,8 +34,12 @@ const Contact = () => {
 
     return (
         <section id="contact">
-            <h5>Get In Touch</h5>
-            <h2>Contact Me</h2>
+            <Spacer y={3}/>
+            <Container css={{ px:'$18', '@md':{px: '400px'}}}><Divider/></Container>
+            <Spacer y={3}/>
+            <Text align='center'>Get In Touch</Text>
+            <Text align='center' weight='bold' size={25}>Contact Me</Text>
+            <Spacer/>
             <Container display="flex" justify="center" direction="column" gap={2}>
                 <Col align='center'>
                     <MdEmail className={style.contact__option_icon} />

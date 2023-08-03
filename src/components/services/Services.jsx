@@ -32,7 +32,7 @@ const Services = () => {
             <Image src="/images/softwareImage.png"
             width={500} />
             <Spacer/>
-            <Container display="flex" justify="center" align='center'>
+            <Container align='center'>
                 {services.map((service, index)=>(
                     <div key={index}>
                         <Spacer/>

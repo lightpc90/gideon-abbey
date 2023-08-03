@@ -1,12 +1,12 @@
 import React from "react";
 import style from './header.module.css'
-import {Button, Link, Spacer, Container} from '@nextui-org/react'
+import {Button, Link, Spacer, Container, Row} from '@nextui-org/react'
 
 const CTA = () => {
     return (
         <div >
             <Spacer/>
-            <Container justify="center" align='center' display="flex">
+            <Row justify="center" align='center' >
                 <Link href='#'>
                     <Button bordered color='secondary' auto>Download CV</Button>
                 </Link>
@@ -14,7 +14,7 @@ const CTA = () => {
                 <Link href="#contact">
                     <Button bordered auto flat color='primary'>Let&apos;s Talk</Button>
                 </Link>
-            </Container>  
+            </Row>  
         </div>
     )
 }

@@ -80,7 +80,7 @@ const Contact = () => {
                     <Textarea aria-labelledby="message" name='message' value={message} onChange={(e)=>setMessage(e.target.value)} width="500px" bordered color="primary" placeholder="Your Message" />
                 </Row>
                 <Spacer/>
-                <Row justify="center"><Button disabled={!formFilled} onClick={handleSendMessage} bordered color='primary' >Send Message</Button></Row>
+                <Row justify="center"><Button disabled={!formFilled} onPress={handleSendMessage} bordered color='primary' >Send Message</Button></Row>
             </Container>
             <Spacer y={3}/>
         </section>

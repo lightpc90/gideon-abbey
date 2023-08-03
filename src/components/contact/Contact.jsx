@@ -3,8 +3,10 @@ import style from './contact.module.css';
 import {MdEmail} from 'react-icons/md';
 import {BsWhatsapp} from 'react-icons/bs'
 import { useState, useEffect } from 'react';
-import emailjs from 'emailjs-com'
 import { Container, Button, Input, Textarea, Link, Spacer, Col, Row, Text, Divider } from "@nextui-org/react";
+import Messages from '../../helpersFunction/Messages'
+
+import {sendEmail} from '../../helpersFunction/sendEmail'
 
 const Contact = () => {
 
@@ -24,9 +26,16 @@ const Contact = () => {
         isFormFilled()
     }, [name, email, message])
 
+        // Import the EmailJS library
+
+    // Function to handle sending the email
+
+
+
     const handleSendMessage = ()=>{
-        const form = {Fullname: {name}, Email: {email}, Message: {message}}
-        emailjs.sendForm('service_qkk6zta', 'template_z40nlow', form, '_QtqTYQ1KUObNtBwI')
+        const formData = {name: name, email: email, message: message}
+        Messages(formData)
+        alert('Message not sent! Kindly use other means to get to me. Thanks')
         setName('')
         setEmail('')
         setMessage('')
@@ -60,18 +69,18 @@ const Contact = () => {
                 <Text b align='center'>Send me a Message</Text>
                 <Spacer />
                 <Row justify='center' >
-                    <Input aria-labelledby="full name" value={name} onChange={(e)=>setName(e.target.value)} bordered width="500px" color="primary" placeholder="Your Full Name" />
+                    <Input aria-labelledby="full name" name="Full Name" value={name} onChange={(e)=>setName(e.target.value)} bordered width="500px" color="primary" placeholder="Your Full Name" />
                 </Row>
                 <Spacer/>
                 <Row justify='center' >
-                    <Input aria-labelledby="email" value={email} onChange={(e)=>setEmail(e.target.value)} bordered width="500px" color="primary" placeholder="Your Email" />
+                    <Input aria-labelledby="email" name="email" value={email} onChange={(e)=>setEmail(e.target.value)} bordered width="500px" color="primary" placeholder="Your Email" />
                 </Row>
                 <Spacer/>
                 <Row justify='center' >
-                    <Textarea aria-labelledby="message" value={message} onChange={(e)=>setMessage(e.target.value)} width="500px" bordered color="primary" placeholder="Your Message" />
+                    <Textarea aria-labelledby="message" name='message' value={message} onChange={(e)=>setMessage(e.target.value)} width="500px" bordered color="primary" placeholder="Your Message" />
                 </Row>
                 <Spacer/>
-                <Row justify="center"><Button disabled={!formFilled} onPress={handleSendMessage} bordered color='primary' >Send Message</Button></Row>
+                <Row justify="center"><Button disabled={!formFilled} onClick={handleSendMessage} bordered color='primary' >Send Message</Button></Row>
             </Container>
             <Spacer y={3}/>
         </section>

@@ -18,6 +18,7 @@ const Portfolio = () => {
             <Services/>
             <Spacer y={5}/>
             <Text weight='bold' size={25} align='center'>Home Automation Services</Text>
+            <Spacer/>
             <HomeAutomationCard/>
         </section>
     )

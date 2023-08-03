@@ -15,7 +15,7 @@ const PortfolioCard = () => {
         {image: '/images/nft-ipfs/ipfs.png', name: 'IPFS NFT Collection', categories: 'NFTs, Dapp Web3, testnet', tech: 'Nextjs, IPFS, Solidity, Hardhart,  Nextui', liveViewUrl: 'https://nft-ipfs-kappa.vercel.app/', codeUrl: 'https://github.com/lightpc90/nft-ipfs'},
     ]
   return (
-    <div>
+    <Container css={{background: '$purple900', py: '$10'}}>
         {projects.map((project, index)=>(
             <Grid.Container direction='row' justify='center' gap={2} key={index}>
                 <Grid md={4} sm={8}>
@@ -50,7 +50,7 @@ const PortfolioCard = () => {
                 </Grid>
             </Grid.Container>
         ))}
-    </div>
+    </Container>
   )
 }
 

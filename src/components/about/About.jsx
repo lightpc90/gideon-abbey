@@ -47,14 +47,14 @@ const About = () => {
             <Spacer/>
             <Container display="flex" direction="column" justify='center' css={{ "@md": {px:'500px'}  }}>
                 <Text weight='bold' align='center'>Meet Gideon Abbey</Text>
-                <Text size={20} justify='center'>
+                <p>
                  ...a visionary software developer and home automation engineer. 
                 With an unwavering passion for blockchain and Web3 solutions, I craft seamless, cutting-edge solutions that redefine the future. 
                 Join me on this journey of boundless innovation and let&apos;s shape a better world together. 
                 Explore my portfolio and discover the power of technology and human ingenuity in action. 
                 Welcome to the future. 
                 <span role="img" aria-label="Handshake">{"\u{1F91D}"}</span>
-                </Text>
+                </p>
                 <Spacer/>
                 <Row justify="center">
                 <Link  href="#contact">

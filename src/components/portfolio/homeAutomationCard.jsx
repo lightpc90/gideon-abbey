@@ -14,7 +14,7 @@ const HomeAutomationCard = () => {
         {image: '/images/PrivateCinema/privateCinema.jpg', name: 'Private Cinema'},
     ]
   return (
-    <div>
+    <Container css={{background: '$blue900', py: '$10'}}>
         {projects.map((project, index)=>(
             <Grid.Container direction='row' justify='center' gap={2} key={index}>
                 <Grid md={4} sm={8}>
@@ -27,7 +27,7 @@ const HomeAutomationCard = () => {
                 </Grid>
             </Grid.Container>
         ))}
-    </div>
+    </Container>
   )
 }
 

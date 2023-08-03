@@ -9,34 +9,34 @@ import { Link, Container, Text, Row, Col, Spacer } from "@nextui-org/react";
 
 const Footer = () => {
     return (
-        <footer id="footer">
+        <Container css={{background: '$blue900', color: 'white', py: '$10'}} id="footer">
             <Spacer y={6}/>
             <Container align='center'>
-            <Link href="#" className="footer__logo"><Text size={25} weight='bold'>Gideon Abbey</Text></Link>
+            <Link href="#" className="footer__logo"><Text css={{color: 'white'}} size={25} weight='bold'>Gideon Abbey</Text></Link>
             <Spacer/>
             <ul className="permalinks">
-                <li><Link href="#">Home</Link></li>
-                <li><Link href="#about">About</Link></li>
-                <li><Link href="#experience">Experience</Link></li>
-                <li><Link href="#portfolio">Portfolio</Link></li>
-                <li><Link href="#contact">Contact</Link></li>
+                <li><Link css={{color: 'white'}} href="#">Home</Link></li>
+                <li><Link css={{color: 'white'}} href="#about">About</Link></li>
+                <li><Link css={{color: 'white'}} href="#experience">Experience</Link></li>
+                <li><Link css={{color: 'white'}} href="#portfolio">Portfolio</Link></li>
+                <li><Link css={{color: 'white'}} href="#contact">Contact</Link></li>
             </ul>
             </Container>
             <Spacer y={6}/>
             <Container display="flex" justify="center" >
-                <Link href="https://github.com/lightpc90/" target='_blank' rel='noopener noreferrer'><FaGithubSquare size={40}/></Link>
+                <Link css={{color: 'white'}} href="https://github.com/lightpc90/" target='_blank' rel='noopener noreferrer'><FaGithubSquare size={40}/></Link>
                 <Spacer/>
-                <Link href="https://linkedin.com/in/gideon-abbey-a8a350122/" target='_blank' rel='noopener noreferrer'><BsLinkedin size={40}/></Link>
+                <Link css={{color: 'white'}} href="https://linkedin.com/in/gideon-abbey-a8a350122/" target='_blank' rel='noopener noreferrer'><BsLinkedin size={40}/></Link>
                 <Spacer/>
-                <Link href="https://instagram.com/24voltz_it_solutions" target='_blank' rel='noopener noreferrer'><GrInstagram size={40}/></Link>
+                <Link css={{color: 'white'}} href="https://instagram.com/24voltz_it_solutions" target='_blank' rel='noopener noreferrer'><GrInstagram size={40}/></Link>
                 <Spacer/>
-                <Link href="https://twitter.com/_lightpc_" target='_blank' rel='noopener noreferrer'><FaTwitter size={40} /></Link>
+                <Link css={{color: 'white'}} href="https://twitter.com/_lightpc_" target='_blank' rel='noopener noreferrer'><FaTwitter size={40} /></Link>
             </Container>
             <Container><Spacer y={6}/></Container>
             <Container align='center' >
-                <small>&copy; Gideon Abbey portfolio. All rights reserved</small>
+                <p>&copy; Gideon Abbey portfolio. All rights reserved</p>
             </Container>
-        </footer>
+        </Container>
     )
 }
 

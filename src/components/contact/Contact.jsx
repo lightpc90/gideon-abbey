@@ -73,7 +73,7 @@ const Contact = () => {
                 <Spacer/>
                 <Row justify="center"><Button disabled={!formFilled} onPress={handleSendMessage} bordered color='primary' >Send Message</Button></Row>
             </Container>
-            <Container></Container>
+            <Spacer y={3}/>
         </section>
     )
 }

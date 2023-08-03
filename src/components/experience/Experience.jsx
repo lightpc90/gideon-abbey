@@ -21,7 +21,7 @@ const Experience = () => {
         <div id="experience">
             <Spacer y={6}/>
             <Text justify='center' align='center'>My Skills </Text>
-            <Text weight='bold' size={25} align='center'>My Services </Text>
+            <Text weight='bold' size={25} align='center'>My Experiences</Text>
             
             <Spacer/>
             <Grid.Container justify="center" gap={2}>
@@ -108,7 +108,7 @@ const Experience = () => {
                 </Grid>
 
 
-                 {/** ############ Home Automation Services #############*/}
+                 {/** ############ Home Autom
                 <Grid>
                     <Card>
                         <Container css={{p: '$15'}} >
@@ -128,6 +128,7 @@ const Experience = () => {
                         </Container>
                     </Card>
                 </Grid>
+            ation Services #############*/}
             </Grid.Container>
         </div>
     )

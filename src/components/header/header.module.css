@@ -28,7 +28,7 @@
     align-items: center;
     gap: 0.8rem;
     position: absolute;
-    left: 20%;
+    left: 10%;
     bottom: 0rem;
 }
 
@@ -64,7 +64,7 @@
 
 .scroll__down {
     position: absolute;
-    right: 20%;
+    right: 10%;
     bottom: 5rem;
     transform: rotate(90deg);
     font-weight: 300;

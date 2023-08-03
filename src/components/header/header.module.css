@@ -81,6 +81,16 @@
    }
 }
 
+@media screen and (max-width: 920px) {
+ 
+    .scroll__down {
+        right: -10%;
+    }
+    .header__socials {
+        left: -10%;
+    }
+ }
+
 
 /* ================== MEDIA QUERIES (SMALL DEVICES) =============== */
 
@@ -92,4 +102,8 @@
    .header__socials, .scroll__down {
     display: none;
    }
+
+
+   
 }
+

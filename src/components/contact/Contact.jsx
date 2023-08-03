@@ -14,6 +14,7 @@ const Contact = () => {
     const [email, setEmail] = useState('')
     const [message, setMessage] = useState('')
     const [formFilled, setFormFilled] = useState(false)
+    const [isBlur, setIsBlur] = useState(false)
 
     const isFormFilled = ()=>{
         if(name && email && message){
@@ -27,21 +28,20 @@ const Contact = () => {
     }, [name, email, message])
 
     //function to reset back the zoom to normal when using input components
-    const handleBlur = ()=>{
-        // Reset the zoom level to 1
-      document.body.style.zoom = 1;
-    }
-
-        // Import the EmailJS library
-
-    // Function to handle sending the email
+    useEffect(()=>{
+        const handleBlur = ()=>{
+            // Reset the zoom level to 1
+          document.body.style.zoom = 1;
+        }
+        handleBlur()
+    }, [isBlur])
 
 
 
     const handleSendMessage = ()=>{
         const formData = {name: name, email: email, message: message}
         Messages(formData)
-        handleBlur()
+        setIsBlur(true)
         alert('Message not sent! Kindly use other means to get to me. Thanks')
         setName('')
         setEmail('')
@@ -76,15 +76,15 @@ const Contact = () => {
                 <Text b align='center'>Send me a Message</Text>
                 <Spacer />
                 <Row justify='center' >
-                    <Input aria-labelledby="full name" name="Full Name" onBlur={handleBlur} value={name} onChange={(e)=>setName(e.target.value)} bordered width="500px" color="primary" placeholder="Your Full Name" />
+                    <Input aria-labelledby="full name" name="Full Name"  value={name} onChange={(e)=>setName(e.target.value)} bordered width="500px" color="primary" placeholder="Your Full Name" />
                 </Row>
                 <Spacer/>
                 <Row justify='center' >
-                    <Input aria-labelledby="email" name="email" onBlur={handleBlur} value={email} onChange={(e)=>setEmail(e.target.value)} bordered width="500px" color="primary" placeholder="Your Email" />
+                    <Input aria-labelledby="email" name="email"  value={email} onChange={(e)=>setEmail(e.target.value)} bordered width="500px" color="primary" placeholder="Your Email" />
                 </Row>
                 <Spacer/>
                 <Row justify='center' >
-                    <Textarea aria-labelledby="message" name='message' onBlur={handleBlur} value={message} onChange={(e)=>setMessage(e.target.value)} width="500px" bordered color="primary" placeholder="Your Message" />
+                    <Textarea aria-labelledby="message" name='message'  value={message} onChange={(e)=>setMessage(e.target.value)} width="500px" bordered color="primary" placeholder="Your Message" />
                 </Row>
                 <Spacer/>
                 <Row justify="center"><Button disabled={!formFilled} onPress={handleSendMessage} bordered color='primary' >Send Message</Button></Row>

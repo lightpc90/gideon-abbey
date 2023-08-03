@@ -42,7 +42,7 @@ const Contact = () => {
         const formData = {name: name, email: email, message: message}
         Messages(formData)
         setIsBlur(true)
-        alert('Message not sent! Kindly use other means to get to me. Thanks')
+        alert('Message not sent! Kindly contact me via the other means. Thanks')
         setName('')
         setEmail('')
         setMessage('')

@@ -70,6 +70,13 @@ const Experience = () => {
                         <article className={style.experience__details}>
                             <BsFillPatchCheckFill className ={style.experience__details_icon} />
                             <div>
+                                <h4>NoSql</h4>
+                                <small className="text-light">Intermediate</small>
+                            </div>
+                        </article>
+                        <article className={style.experience__details}>
+                            <BsFillPatchCheckFill className ={style.experience__details_icon} />
+                            <div>
                                 <h4>Python</h4>
                                 <small className="text-light">Experienced</small>
                             </div>

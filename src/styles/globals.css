@@ -4,42 +4,62 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-html {
-    scroll-behavior: smooth;
-    }
-
-
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* Apply CSS Reset or Normalize.css (Choose one) */
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* Normalize.css (CDN: https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css) */
+/* Uncomment the next line to use Normalize.css */
+/* @import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css'); */
+
+/* Set Root Variables */
+:root {
+  --foreground-color: #000; /* Adjust as needed */
+  --background-start-color: #03a8c9; /* Adjust as needed */
+  --background-color-1: #767e04; /* Adjust as needed */
+  --background-color-2: #4a3c72; /* Adjust as needed */
+  --background-color-3: #332a88; 
+  --background-end-color: #03a8c9; /* Adjust as needed */
+}
+
+/* Dark Mode */
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-
-
-   
+    --foreground-color: #fff; /* Adjust as needed */
+    --background-start-color: #000; /* Adjust as needed */
+    --background-end-color: #000; /* Adjust as needed */
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-
-    font-family: 'Poppins', sans-serif;
-    
-    line-height: 1.7;
+/* Base Styles */
+html {
+  scroll-behavior: smooth;
 }
 
+body {
+  color: var(--foreground-color);
+  background: linear-gradient(to bottom, transparent, var(--background-end-color) 20%,  var(--background-color-3) 35%,
+  var(--background-color-2) 50%,
+  var(--background-color-1) 80%,
+  var(--background-start-color));
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.7;
+}
+
+/* Additional Styles */
+/* Add any additional global styles here */
+
+/* Responsive Design (Example) */
+@media (max-width: 768px) {
+  /* Styles for devices with a maximum width of 768px */
+}
+
+/* Accessibility Styles (Example) */
+/* Add styles for focus states, contrast, etc. */
+
+/* Optimize Performance (Example) */
+/* Remove unused styles, minify the CSS, and consider using CSS variables for optimization. */

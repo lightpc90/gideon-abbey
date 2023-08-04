@@ -20,7 +20,7 @@ const About = () => {
                             <Container align='center'>
                                 <BsAward className={style.about__icon}/>
                                 <h5>Experience</h5>
-                                <small>5+ years working</small>
+                                <small>4+ years working</small>
                             </Container>  
                         </Card>
                     </Grid>

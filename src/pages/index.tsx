@@ -9,7 +9,7 @@ import Contact from '../components/contact/Contact'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
-  const siteProperties = {title: 'Gideon Abbey Portfolio', description: 'This is Gideon Abbey&apos;s portfolio website. He&apos;s a Web3/Software developer, follow the link to know more about him',  imageUrl: '/images/my pictures/OpenGraphMetaTag.png', pageUrl: 'www.gideonabbey.tech'}
+  const siteProperties = {title: 'Gideon Abbey&apos;s Portfolio', description: 'This is Gideon Abbey&apos;s portfolio website. He&apos;s a Web3/Software developer, follow the link to know more about him',  imageUrl: '/images/my pictures/OpenGraphMetaTag.png', pageUrl: 'www.gideonabbey.tech'}
   return (
     <>
       <Head>

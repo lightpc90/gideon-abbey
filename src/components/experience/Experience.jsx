@@ -49,13 +49,6 @@ const Experience = () => {
                         <article className={style.experience__details}>
                             <BsFillPatchCheckFill className ={style.experience__details_icon} />
                             <div>
-                                <h4>Git/Github (Version Control)</h4>
-                                <small className="text-light">Experienced</small>
-                            </div>
-                        </article>
-                        <article className={style.experience__details}>
-                            <BsFillPatchCheckFill className ={style.experience__details_icon} />
-                            <div>
                                 <h4>Solidity</h4>
                                 <small className="text-light">Experienced</small>
                             </div>
@@ -84,6 +77,13 @@ const Experience = () => {
                         <article className={style.experience__details}>
                             <BsFillPatchCheckFill className ={style.experience__details_icon} />
                             <div>
+                                <h4>Vercel(CI/CD)</h4>
+                                <small className="text-light">Experienced</small>
+                            </div>
+                        </article>
+                        <article className={style.experience__details}>
+                            <BsFillPatchCheckFill className ={style.experience__details_icon} />
+                            <div>
                                 <h4>Python</h4>
                                 <small className="text-light">Experienced</small>
                             </div>
@@ -106,6 +106,13 @@ const Experience = () => {
                             <BsFillPatchCheckFill className ={style.experience__details_icon} />
                             <div>
                                 <h4>SQL</h4>
+                                <small className="text-light">Experienced</small>
+                            </div>
+                        </article>
+                        <article className={style.experience__details}>
+                            <BsFillPatchCheckFill className ={style.experience__details_icon} />
+                            <div>
+                                <h4>Git/Github (Version Control)</h4>
                                 <small className="text-light">Experienced</small>
                             </div>
                         </article>

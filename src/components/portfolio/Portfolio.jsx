@@ -7,7 +7,7 @@ import Services from '../services/Services'
 
 const Portfolio = () => {
     return (
-        <section id="portfolio">
+        <div id="portfolio">
             <Spacer y={3}/>
             <Container css={{px: '$18'}}><Divider/></Container>
             <Spacer y={3}/>
@@ -20,7 +20,7 @@ const Portfolio = () => {
             <Text weight='bold' size={25} align='center'>Home Automation Services</Text>
             <Spacer/>
             <HomeAutomationCard/>
-        </section>
+        </div>
     )
 }
 

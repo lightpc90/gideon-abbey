@@ -11,7 +11,7 @@ const Header = () => {
         <header id="home">
            
             <Container>
-            <Container css={{p:"50px"}}></Container>
+            <Container css={{py:"50px"}}></Container>
             <div className={style.header__container}>
                 <Container css={{p:'$15'}} align='center'>
                     <Avatar css={{zIndex: '0'}} bordered color='gradient' src="/images/my pictures/dp2.png" className="w-40 h-40 text-large" />

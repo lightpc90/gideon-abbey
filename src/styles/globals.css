@@ -65,6 +65,20 @@ html {
   scroll-behavior: smooth;
 }
 
+/* For Firefox */
+html {
+  scrollbar-color: #888 transparent; /* Set thumb color and track color */
+  scrollbar-width: thin; /* Adjust the width as needed */
+}
+
+/* For Microsoft Edge */
+html {
+  scrollbar-face-color: #888; /* Set thumb color */
+  scrollbar-track-color: transparent; /* Set track color to transparent */
+  scrollbar-base-color: transparent; /* Set base color to transparent */
+}
+
+
 body {
   color: var(--foreground-color);
   background: linear-gradient(to bottom, transparent, var(--background-end-color) var(--background-start-color));

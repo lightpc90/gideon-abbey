@@ -4,6 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
+/* For WebKit browsers (e.g., Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 0px; /* Adjust the width as needed */
+}
+
+
 /* Apply CSS Reset or Normalize.css (Choose one) */
 /* CSS Reset */
 * {
@@ -11,6 +17,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* For WebKit browsers (e.g., Chrome, Safari) */
+
 
 /* Normalize.css (CDN: https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css) */
 /* Uncomment the next line to use Normalize.css */
@@ -20,6 +29,9 @@
 :root {
   --foreground-color: #000; /* Adjust as needed */
   --background-start-color: #e3fcbb; 
+
+
+
   /* 
     --background-color-1: #767e04; 
     --background-color-2: #4a3c72; 
@@ -48,6 +60,7 @@ body {
   background: linear-gradient(to bottom, transparent, var(--background-end-color) var(--background-start-color));
   font-family: 'Poppins', sans-serif;
   line-height: 1.7;
+
 }
 
 /* Additional Styles */

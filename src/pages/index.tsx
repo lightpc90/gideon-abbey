@@ -16,14 +16,14 @@ export default function Home() {
                 {/* Open Graph meta tags */}
         <meta property="og:title" content={siteProperties.title} />
         <meta property="og:description" content={siteProperties.description} />
-        <meta property="og:image" content={siteProperties.imageUrl} />
-        <meta property="og:url" content={siteProperties.pageUrl} />
+        <meta property="og:image" content={`${siteProperties.imageUrl}`} />
+        <meta property="og:url" content={`${siteProperties.imageUrl}`} />
         <meta property="og:type" content="website" />
 
         {/* Twitter Card meta tags (optional but recommended) */}
         <meta name="twitter:title" content={siteProperties.title} />
         <meta name="twitter:description" content={siteProperties.description} />
-        <meta name="twitter:image" content={siteProperties.imageUrl} />
+        <meta name="twitter:image" content={`${siteProperties.imageUrl}`} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
 

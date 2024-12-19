@@ -4,7 +4,7 @@ import React from "react";
 import style from './header.module.css';
 import CTA from "./CTA";
 import HeaderSocials from "./HeaderSocials";
-import { Container, Spacer, Avatar, Text } from "@nextui-org/react";
+import { Container} from "@nextui-org/react";
 import Image from "next/image";
 
 
@@ -22,9 +22,9 @@ const Header = () => {
                         />
                     </div>
                     <h5>Hello, I&apos;m</h5>
-                    <Text align='center' weight='bold' size={40}>Gideon Abbey </Text>
-                    <h5 className="intro" >Blockchain/Web3 Developer | Fullstack developer | Home Automation Engineer</h5>
-                    <Text weight='bold'>+234(0)813 085 3142</Text>
+                    <h1 className="font-bold text-4xl">Gideon Abbey </h1>
+                    <h5 className="intro" >Fullstack/Web3 developer | System Integrator</h5>
+                    <h3 className="font-bold">+234(0)813 085 3142</h3>
                     <CTA />
                     <HeaderSocials />
                     <a href="#contact" className={style.scroll__down}>Scroll Down</a>

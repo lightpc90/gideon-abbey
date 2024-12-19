@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import {Container, Grid, Card, Col, Row, Spacer, Button, Image, Text, Link} from '@nextui-org/react'
 

@@ -1,3 +1,5 @@
+'use client'
+
 import React from "react";
 import style from './contact.module.css';
 import {MdEmail} from 'react-icons/md';

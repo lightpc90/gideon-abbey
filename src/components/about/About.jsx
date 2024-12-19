@@ -1,3 +1,5 @@
+'use client'
+
 import React from "react";
 import style from './about.module.css';
 import {BsAward} from 'react-icons/bs'

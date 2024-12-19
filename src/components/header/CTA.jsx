@@ -1,3 +1,5 @@
+'use client'
+
 import React from "react";
 import style from './header.module.css'
 import {Button, Link, Spacer, Container, Row} from '@nextui-org/react'

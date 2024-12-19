@@ -1,3 +1,5 @@
+'use client'
+
 import React from "react";
 import style from './nav.module.css';
 import {AiOutlineHome, AiOutlineUser} from 'react-icons/ai'

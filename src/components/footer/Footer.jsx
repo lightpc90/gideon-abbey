@@ -1,3 +1,5 @@
+'use client'    
+
 import React from "react";
 import './footer.module.css';
 import {BsLinkedin} from 'react-icons/bs'

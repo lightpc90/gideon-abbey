@@ -1,3 +1,5 @@
+'use client'
+
 import React from "react";
 import style from './portfolio.module.css';
 import { Container, Spacer, Grid, Text, Image, Button, Divider, Card, Col, Row } from "@nextui-org/react";

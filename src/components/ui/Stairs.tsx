@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
 
 // variants
-const staiAnimation = {
+const stairAnimation = {
     initial: { top: "0%" },
     animate: { top: "100%" },
     exit: { top: ["100%", "0%"] }
@@ -20,7 +20,7 @@ const Stairs = () => {
               return (
                   <motion.div 
                       key={index}
-                      variants={staiAnimation}
+                      variants={stairAnimation}
                       initial="initial"
                       animate="animate"
                       exit="exit"

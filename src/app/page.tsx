@@ -1,7 +1,6 @@
 import Photo from "@/components/photo/Photo";
 import Social from "@/components/social/Social";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 import { FiDownload } from "react-icons/fi";
 
 export default function Home() {
